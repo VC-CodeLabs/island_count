@@ -38,7 +38,7 @@ You can either email me your submission or Fork the Repository and create a pull
 To submit using the GitHub repository, you must fork the challenge repository and create a Pull Request with your solution. <br>
 Code Your Solution: In your chosen high-performance language. Remember, efficiency is key! <br>
 Naming Convention: Name your solution file using the following convention: <your_name>_solution.* (replace <your_name> with your actual name and * with the appropriate file extension for your language). <br>
-All merge requests will remain open and un-merged until Monday morning.<br><br>
+<br>*All merge requests will remain open and un-merged until Monday morning.*<br><br>
 
 🏆 **Winner Selection:** <br>
 Criteria Correctness: Solutions must pass all test cases.<br>
