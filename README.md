@@ -45,4 +45,4 @@ Criteria Correctness: Solutions must pass all test cases.<br>
 Performance: Among the correct solutions, the winning solution will be the one with the fastest execution time. <br><br>
 
 🕒 **Submission Deadline:**<br>
-All email solutions or merge requests must be submitted by Sunda at 23:59:59.<br><br>
+All email solutions or merge requests must be submitted by Sunday at 23:59:59.<br><br>
