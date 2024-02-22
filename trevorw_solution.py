@@ -137,10 +137,7 @@ def main():
                     island_buckets = merge_buckets(island_buckets, w, n)
                     data[j][i] = n
 
-    # for row in data:
-    #     print(row)
-    # print(f'buckets: {island_buckets}')
-    print(f'The number of buckets is {len(island_buckets)}')
+    print(f'The number of islands is {len(island_buckets)}')
 
 
 if __name__ == '__main__':
