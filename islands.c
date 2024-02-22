@@ -5,13 +5,13 @@
 #define ROWS 4
 #define COLS 5
 
-static int directions[4][2] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+static int offset[4][2] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
 void dfs(char grid[ROWS][COLS], int i, int j) {
     if (i < 0 || i >= ROWS || j < 0 || j >= COLS || grid[i][j] != '1') return;
     grid[i][j] = '0';
     for (int k = 0; k < 4; k++) 
-        dfs(grid, i + directions[k][0], j + directions[k][1]);
+        dfs(grid, i + offset[k][0], j + offset[k][1]);
 }
 
 int count(char grid[ROWS][COLS]) {
