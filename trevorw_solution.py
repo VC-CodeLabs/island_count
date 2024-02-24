@@ -7,17 +7,15 @@
 import time
 
 
-def get_island_map():
-    return [
+def get_island_maps():
+    island_maps = []
+    island_maps.append([
         ["1", "1", "0", "0", "0"],
         ["1", "1", "0", "0", "0"],
         ["0", "0", "1", "0", "0"],
         ["0", "0", "0", "1", "1"]
-    ]
-
-
-def get_island_map2():
-    return [
+    ])
+    island_maps.append([
         ["1", "1", "0", "0", "0", "1", "1", "0", "0", "0"],
         ["1", "1", "1", "1", "1", "1", "1", "0", "0", "0"],
         ["0", "0", "1", "0", "0", "1", "1", "0", "0", "0"],
@@ -26,11 +24,8 @@ def get_island_map2():
         ["1", "1", "0", "0", "0", "1", "1", "0", "0", "1"],
         ["0", "0", "1", "0", "0", "1", "1", "0", "0", "0"],
         ["0", "0", "0", "1", "1", "1", "1", "0", "0", "0"]
-    ]
-
-
-def get_island_map3():
-    return [
+    ])
+    island_maps.append([
         ["1", "1", "0", "0", "0", "1", "1", "0", "0", "0", "0", "0", "0", "1", "1", "0", "1", "0"],
         ["1", "1", "1", "1", "1", "1", "1", "0", "0", "0", "1", "1", "1", "1", "1", "0", "1", "0"],
         ["0", "0", "1", "0", "0", "1", "1", "0", "0", "0", "1", "0", "0", "1", "1", "0", "1", "1"],
@@ -43,11 +38,8 @@ def get_island_map3():
         ["1", "1", "0", "0", "0", "1", "1", "0", "0", "1", "0", "0", "0", "1", "1", "0", "0", "1"],
         ["0", "1", "1", "0", "0", "1", "1", "1", "1", "1", "1", "0", "0", "1", "1", "1", "1", "0"],
         ["0", "0", "0", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1", "1", "1", "0", "0", "0"]
-    ]
-
-
-def get_island_map4():
-    return [
+    ])
+    island_maps.append([
         ["1", "1", "0", "0", "0", "1", "1", "0", "1", "0", "0", "0", "0", "1", "1", "0", "1", "0"],
         ["1", "1", "1", "1", "1", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "0", "1", "0"],
         ["0", "0", "1", "0", "0", "1", "1", "0", "1", "1", "1", "0", "0", "1", "1", "0", "1", "1"],
@@ -60,11 +52,8 @@ def get_island_map4():
         ["1", "1", "0", "0", "0", "1", "1", "0", "0", "1", "0", "0", "0", "1", "1", "0", "0", "1"],
         ["0", "1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "0", "0", "1", "1", "1", "1", "1"],
         ["0", "0", "0", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1", "1", "1", "0", "0", "1"]
-    ]
-
-
-def get_island_map6():
-    return [
+    ])
+    island_maps.append([
         ["1", "1", "0", "0", "0", "1", "1", "0", "1", "0", "0", "0", "0", "1", "1", "0", "1", "0", "1", "0", "0", "0", "1", "1", "0", "1", "0", "0", "0", "0", "1", "1", "0", "1", "0"],
         ["1", "1", "1", "1", "1", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "1", "0", "1", "0", "1", "1", "1", "0", "1", "0", "1", "0"],
         ["0", "0", "1", "0", "0", "1", "1", "0", "1", "1", "1", "0", "0", "1", "1", "0", "1", "1", "0", "1", "0", "0", "1", "1", "0", "1", "1", "1", "0", "0", "0", "1", "0", "1", "1"],
@@ -103,7 +92,15 @@ def get_island_map6():
         ["1", "1", "0", "0", "0", "1", "1", "0", "0", "1", "0", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "0", "1", "1", "0", "0", "1", "0", "0", "0", "1", "1", "0", "0", "1"],
         ["0", "1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "0", "0", "1", "1", "1", "1", "1", "1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "0", "0", "1", "1", "1", "1", "1"],
         ["0", "0", "0", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1", "1", "1", "0", "0", "1", "0", "0", "1", "1", "1", "1", "0", "0", "0", "0", "1", "1", "1", "1", "0", "0", "1"]
-    ]
+    ])
+    island_maps.append([
+        ["1", "1", "0", "0", "0"],
+        ["1", "1", "0", "0", "0"],
+        ["0", "0", "1", "0", "0"],
+        ["0", "0", "0", "1", "1"]
+    ])
+    return island_maps
+
 
 
 def merge_buckets(island_buckets, w, n):
@@ -113,36 +110,41 @@ def merge_buckets(island_buckets, w, n):
     return [merged_bucket] + other_buckets
 
 
-def main():
-    data = get_island_map6()
-
+def get_island_count(island_map):
     c = 1
     island_buckets = []
-    for j in range(len(data)):
-        for i in range(len(data[0])):
-            if data[j][i] == "1":
-                w = data[j][i - 1] if i > 0 and data[j][i - 1] not in ["0", "1"] else None
-                n = data[j - 1][i] if j > 0 and data[j - 1][i] not in ["0", "1"] else None
+    for j in range(len(island_map)):
+        for i in range(len(island_map[0])):
+            if island_map[j][i] == "1":
+                w = island_map[j][i - 1] if i > 0 and island_map[j][i - 1] not in ["0", "1"] else None
+                n = island_map[j - 1][i] if j > 0 and island_map[j - 1][i] not in ["0", "1"] else None
                 if w is None and n is None:
                     island_buckets.append([c])
-                    data[j][i] = c
+                    island_map[j][i] = c
                     c += 1
                 elif w is None and n is not None:
-                    data[j][i] = n
+                    island_map[j][i] = n
                 elif w is not None and n is None:
-                    data[j][i] = w
+                    island_map[j][i] = w
                 elif any([bucket for bucket in island_buckets if w in bucket and n in bucket]):
-                    data[j][i] = n
+                    island_map[j][i] = n
                 else:
                     island_buckets = merge_buckets(island_buckets, w, n)
-                    data[j][i] = n
+                    island_map[j][i] = n
 
     print(f'The number of islands is {len(island_buckets)}')
 
 
+def main():
+    data = get_island_maps()
+
+    for island_map in data:
+        start = time.perf_counter_ns()
+        get_island_count(island_map)
+        end = time.perf_counter_ns()
+        print(f'Time taken = {round(end - start, 6)} ns')
+
+
 if __name__ == '__main__':
-    start = time.perf_counter()
     main()
-    end = time.perf_counter()
-    print(f'Time taken = {round(end - start, 6)}')
 
